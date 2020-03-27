@@ -2176,11 +2176,14 @@ const useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__["
     1: setLoading
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(false);
   const classes = useStyles();
+  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
+    localStorage.clear();
+  }, []);
   return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, loading && __jsx(_material_ui_core_LinearProgress__WEBPACK_IMPORTED_MODULE_5___default.a, {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36,
+      lineNumber: 40,
       columnNumber: 19
     }
   }), __jsx(_material_ui_core_Container__WEBPACK_IMPORTED_MODULE_2___default.a, {
@@ -2188,7 +2191,7 @@ const useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__["
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37,
+      lineNumber: 41,
       columnNumber: 7
     }
   }, !loading && __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_6___default.a, {
@@ -2196,7 +2199,7 @@ const useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__["
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40,
+      lineNumber: 44,
       columnNumber: 13
     }
   }, __jsx(_material_ui_core__WEBPACK_IMPORTED_MODULE_8__["Typography"], {
@@ -2205,7 +2208,7 @@ const useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__["
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41,
+      lineNumber: 45,
       columnNumber: 15
     }
   }, Object(_utils_translation__WEBPACK_IMPORTED_MODULE_7__["default"])('type.of.food'))), __jsx(_material_ui_core_Box__WEBPACK_IMPORTED_MODULE_6___default.a, {
@@ -2213,7 +2216,7 @@ const useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__["
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45,
+      lineNumber: 49,
       columnNumber: 13
     }
   }, __jsx(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_4___default.a, {
@@ -2221,7 +2224,7 @@ const useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__["
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46,
+      lineNumber: 50,
       columnNumber: 15
     }
   }, __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -2230,7 +2233,7 @@ const useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__["
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47,
+      lineNumber: 51,
       columnNumber: 17
     }
   }, __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -2240,7 +2243,7 @@ const useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__["
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48,
+      lineNumber: 52,
       columnNumber: 19
     }
   }, __jsx(_Components_ButtonSelector__WEBPACK_IMPORTED_MODULE_9__["ButtonSelector"], {
@@ -2251,7 +2254,7 @@ const useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__["
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49,
+      lineNumber: 53,
       columnNumber: 21
     }
   })), __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -2261,7 +2264,7 @@ const useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__["
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51,
+      lineNumber: 55,
       columnNumber: 19
     }
   }, __jsx(_Components_ButtonSelector__WEBPACK_IMPORTED_MODULE_9__["ButtonSelector"], {
@@ -2272,7 +2275,7 @@ const useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__["
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52,
+      lineNumber: 56,
       columnNumber: 21
     }
   })), __jsx(_material_ui_core_Grid__WEBPACK_IMPORTED_MODULE_3___default.a, {
@@ -2282,7 +2285,7 @@ const useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__["
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54,
+      lineNumber: 58,
       columnNumber: 19
     }
   }, __jsx(_Components_ButtonSelector__WEBPACK_IMPORTED_MODULE_9__["ButtonSelector"], {
@@ -2293,7 +2296,7 @@ const useStyles = Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__["
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55,
+      lineNumber: 59,
       columnNumber: 21
     }
   }))))))));
@@ -2530,6 +2533,26 @@ const TEXTS = [{
   key: 'long.time',
   es: "30' - 60'",
   en: "30' - 60'"
+}, {
+  key: 'review',
+  es: "Revise los datos ingresados",
+  en: "Review data"
+}, {
+  key: 'review.food',
+  es: "Tipo de comida",
+  en: "Type of food"
+}, {
+  key: 'review.vegetables',
+  es: "Tipos de vegetales",
+  en: "Review data"
+}, {
+  key: 'review.mealt',
+  es: "Tipo de carne",
+  en: "Type of mealt"
+}, {
+  key: 'review.time',
+  es: "Tiempo de preparado",
+  en: "Time to cook"
 }];
 /* harmony default export */ __webpack_exports__["default"] = (key => {
   try {

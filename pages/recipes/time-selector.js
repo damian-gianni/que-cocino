@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
@@ -47,16 +47,16 @@ export default () => {
               <Paper className={classes.paper}>
                 <Grid container spacing={3}>
                   <Grid item md={4} xs={6}>
-                    <ButtonSelector href={'/recipes/time-selector'} typeSelector='time' text="short.time" icon='far fa-clock' />
+                    <ButtonSelector href={'/review'} typeSelector='time' text="short.time" icon='far fa-clock' />
                   </Grid>
                   <Grid item md={4} xs={6}>
-                    <ButtonSelector href={'/recipes/time-selector'} typeSelector='time' text="medium.time" icon='far fa-clock' />
+                    <ButtonSelector href={'/review'} typeSelector='time' text="medium.time" icon='far fa-clock' />
                   </Grid>
                   <Grid item md={4} xs={6}>
-                    <ButtonSelector href={'/recipes/time-selector'} typeSelector='time' text="long.time" icon='far fa-clock' />
+                    <ButtonSelector href={'/review'} typeSelector='time' text="long.time" icon='far fa-clock' />
                   </Grid>
                   <Grid item md={4} xs={6}>
-                    <ButtonSelector href={'/recipes/time-selector'} typeSelector='time' text='indifferent' icon='far fa-clock' />
+                    <ButtonSelector href={'/review'} typeSelector='time' text='indifferent' icon='far fa-clock' />
                   </Grid>
                 </Grid>
               </Paper>

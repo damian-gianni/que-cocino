@@ -100,6 +100,31 @@ const TEXTS = [
 		key: 'long.time',
 		es: "30' - 60'",
 		en: "30' - 60'"
+	},
+	{
+		key: 'review',
+		es: "Revise los datos ingresados",
+		en: "Review data"
+	},
+	{
+		key: 'review.food',
+		es: "Tipo de comida",
+		en: "Type of food"
+	},
+	{
+		key: 'review.vegetables',
+		es: "Tipos de vegetales",
+		en: "Review data"
+	},
+	{
+		key: 'review.mealt',
+		es: "Tipo de carne",
+		en: "Type of mealt"
+	},
+	{
+		key: 'review.time',
+		es: "Tiempo de preparado",
+		en: "Time to cook"
 	}
 ];
 

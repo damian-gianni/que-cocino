@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
@@ -30,6 +30,10 @@ const useStyles = makeStyles(theme => ({
 export default () => {
   const [loading, setLoading] = useState(false);
   const classes = useStyles();
+  
+  useEffect(() => {
+    localStorage.clear();
+  }, []);
 
   return (
     <>
