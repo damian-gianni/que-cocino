@@ -1,0 +1,74 @@
+import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/router'
+import { makeStyles } from '@material-ui/core/styles';
+import Container from '@material-ui/core/Container';
+import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
+import LinearProgress from '@material-ui/core/LinearProgress';
+import Box from "@material-ui/core/Box";
+import t from '../../utils/translation';
+import { Typography } from '@material-ui/core';
+import { getRecipesByType } from "../../resources/recipes";
+
+const useStyles = makeStyles(theme => ({
+	container: {
+		display: 'grid',
+		gridTemplateColumns: 'repeat(12, 1fr)',
+		gridGap: theme.spacing(3),
+	},
+	paper: {
+		padding: theme.spacing(1),
+		textAlign: 'center',
+		color: theme.palette.text.secondary,
+		whiteSpace: 'nowrap',
+		marginBottom: theme.spacing(1),
+	},
+	divider: {
+		margin: theme.spacing(2, 0),
+	},
+	icon: {
+		fontSize: '60px'
+	}
+}));
+
+export default () => {
+	const [loading, setLoading] = useState(true);
+	const [recipes, setRecipes] = useState();
+	const classes = useStyles();
+	const router = useRouter();
+
+	useEffect(() => {
+
+		const callApi = async () => {
+			const { typeOfFood } = router.query;
+			const response = await getRecipesByType(typeOfFood);
+			await setRecipes(response);
+			setLoading(false);
+		};
+		callApi();
+	}, []);
+
+	return (
+		<>
+			{loading && <LinearProgress />}
+			<Container maxWidth="lg">
+				{!loading &&
+					<>
+						<Box my={2}>
+							<Typography variant="h6" component="h1">
+								{t('recipes')}
+							</Typography>
+						</Box>
+						<Box my={1}>
+							<Paper className={classes.paper}>
+								{!loading && recipes.map((r, i) => (
+									<div key={i}>{r.name}</div>
+								))}
+							</Paper>
+						</Box>
+					</>
+				}
+			</Container>
+		</>
+	);
+}
