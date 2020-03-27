@@ -14,3 +14,12 @@ Install it and run:
 npm install
 npm run dev
 ```
+## Used technology
+```
+React
+NextJS
+Material UI
+Font-Awesome
+```
+
+In the utils folder, we can find a translation module, but it's not full implemented. You can add the language that you want.
